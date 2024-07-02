@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e3241;
+    color: #eaeaea;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #3dc6c1;
+    background-color: transparent;
+}
+
+.dropdowns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdowns select, .dropdowns button {
+    padding: 9px 10px;
+    background-color: #333;
+    color: #3dc6c1;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.dropdowns button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.timer span {
+    font-size: 20px;
+    padding: 8px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 1px solid #444;
+}
+
+.connect-btn {
+    background-color: #3dc6c1;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.connect-btn:hover {
+    background-color: #0088cc;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.light-mode .dropdowns select, 
+body.light-mode .dropdowns button, 
+body.light-mode .table-container th {
+    background-color: #3dc6c1;
+    color: #000000;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.best-price {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.info .item {
+    text-align: center;
+}
+
+.info .label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.info .value {
+    font-size: 14px;
+}
+
+.price-value {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.average-price {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.table-container {
+    margin: 30px 0;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+}
+
+hr {
+    border: 0.5px solid #555;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left {
+    color: #eaeaea;
+}
+
+.footer-right {
+    color: #eaeaea;
+    cursor: pointer;
+}
+
+.add-home {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.add-home button {
+    background-color: #00aaff;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-home button:hover {
+    background-color: #0088cc;
+}
+
+@media (max-width: 768px) {
+    .header, .info {
+        flex-direction: column;
+    }
+
+    .dropdowns, .header-right {
+        justify-content: center;
+    }
+
+    .info {
+        gap: 20px;
+    }
+
+    .price-value {
+        font-size: 24px;
+    }
+}
