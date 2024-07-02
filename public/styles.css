@@ -67,9 +67,14 @@ body {
     background-color: #3dc6c1;
     border: none;
     border-radius: 7px;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+.connect-btn a{
+    text-decoration: none;
+    color: #2e3182;
 }
 
 .connect-btn:hover {
